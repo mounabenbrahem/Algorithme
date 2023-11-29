@@ -1,0 +1,27 @@
+ALGORITHM EXERCICE
+VAR
+chaine: STRING;
+nb_char,nb_word,nb_vow: INTEGOR;
+c:CHAR;
+BEGIN
+nb_char:=0;
+nb_word:=0;
+nb_vow:=0;
+c:="";
+write ("i need a sentense .");
+read  (chaine);
+WHILE (c<> ".") DO
+   read (c);
+   nb_char:=nb_char+1;
+   IF (c=" ") THEN
+   nb_word:=nb_word+1;
+   IF (c="a" or c="e" or c="i" or c="u" or c="o") THEN
+   nb_vow:=nb_vow+1;
+   END_IF
+   END_IF
+END_WHILE
+write("Number of characteres:",nb_char+1);
+write("Number of words:",nb_word+1);
+write("Number of vowels:",nb_vow);
+END
+
